@@ -1,4 +1,5 @@
 let userDb = require('../model/model');
+const Swal = require('sweetalert2')
 
 exports.create = (req,res) => {
     if(!req.body){
@@ -16,7 +17,8 @@ exports.create = (req,res) => {
     user
         .save(user)
         .then(data => {
-            res.send(data)
+            // res.send(data)
+            res.redirect('/add-user')
         })
         .catch(err => {
             res.status(500).send({
@@ -35,7 +37,7 @@ exports.find = (req,res) => {
             })
             .catch(err => {
                 res.status(500).send({
-                    message: err.message || "Some error occured while get users data."
+                    message: err.message || "Some error occured while get user data."
                 })
             })
     } else {
