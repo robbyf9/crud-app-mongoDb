@@ -1,5 +1,4 @@
 let userDb = require('../model/model');
-const Swal = require('sweetalert2')
 
 exports.create = (req,res) => {
     if(!req.body){
@@ -18,7 +17,6 @@ exports.create = (req,res) => {
         .save(user)
         .then(data => {
             // res.send(data)
-            res.redirect('/add-user')
         })
         .catch(err => {
             res.status(500).send({

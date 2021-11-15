@@ -1,6 +1,6 @@
  <!-- Form Handling-->
  <div class="form">
-    <form action="/api/users" method="POST" id="add_user" class="justify-content-center inline">
+    <form action="/api/users" method="POST" id="add_user" class="justify-content-center inline" onsubmit="swal_response('Success!', 'Data User Sucessfully Saved!', 'success', true, '/add-user')">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
@@ -12,22 +12,22 @@
         <div class="mb-3">
             <label for="gender" class="form-label">Gender</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="male" id="male" value="Male">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
                 <label class="form-check-label" for="male">Male</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="female" id="female" value="Female">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
                 <label class="form-check-label" for="female">Female</label>
             </div>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Status</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="active" value="Active">
+                <input class="form-check-input" type="radio" name="status" id="active" value="Active">
                 <label class="form-check-label" for="active">Active</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="inactive" value="Inactive">
+                <input class="form-check-input" type="radio" name="status" id="inactive" value="Inactive">
                 <label class="form-check-label" for="inactive">Inactive</label>
             </div>
         </div>

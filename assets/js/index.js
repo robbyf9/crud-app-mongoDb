@@ -2,12 +2,16 @@ const form_add = document.getElementById('add_user');
 const form_update = document.getElementById('update_user');
 const btnDelete = document.getElementById('btnDelete');
 
-swal_response = (tittle, text, icon) => {
+swal_response = (tittle, text, icon, redirect = false, url = '/') => {
     Swal.fire({
         title: tittle,
         text: text ?? '',
         icon: icon,
         confirmButtonText: 'Cool!'
+    }).then(()=>{
+        if(redirect){
+            window.location.href = url
+        }
     })
 }
 
@@ -24,10 +28,10 @@ swal_confirm = (id, title, text, confirmButtonText) => {
         if (result.isConfirmed) {
             axios.delete('/api/users/' + id)
                 .then(res => {
-                    swal_response('Success!', 'Data user succesfully deleted!', 'success')
+                    swal_response('Success!', res.message, 'success', true);
                 })
                 .catch(err => {
-                    swal_response('Error!', 'Oopss.. Something Happened!', 'error')
+                    swal_response('Error!', err.message, 'error')
                 })
         }
     })
@@ -38,16 +42,4 @@ delete_user = (id) => {
         id, 'Are you sure?', 'You wont be able to revert this!', 'Yes, Delete It!'
     )
 }
-
-form_add.addEventListener('submit', swal_response(
-    'Success!',
-    'Data user sucessfully saved!',
-    'success'
-))
-
-form_update.addEventListener('submit', swal_response(
-    'Success!',
-    'Data user sucessfully updated!',
-    'success'
-))
 
