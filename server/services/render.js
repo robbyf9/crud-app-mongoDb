@@ -15,5 +15,13 @@ exports.add_user = (req,res) => {
 }
 
 exports.update_user = (req, res) => {
-    res.render('update_user');
+    axios.get(`http://localhost:3000/api/users/`, {params: {id: req.query.id}})
+        .then(function(response){
+            // console.log(req)
+            // res.render(req)
+            res.render('update_user', {users: response.data});
+        })
+        .catch(err => {
+            res.status(500).send('Oops.. Something wrong happened.')
+        })
 }
