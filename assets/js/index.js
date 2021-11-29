@@ -26,9 +26,9 @@ swal_confirm = (id, title, text, confirmButtonText) => {
         confirmButtonText: confirmButtonText
         }).then((result) => {
         if (result.isConfirmed) {
-            axios.delete('/api/users/' + id)
+            axios.delete(`/api/users/${id}`)
                 .then(res => {
-                    swal_response('Success!', res.message, 'success', true);
+                    swal_response('Success!', res.data.message, 'success', true);
                 })
                 .catch(err => {
                     swal_response('Error!', err.message, 'error')
@@ -42,4 +42,19 @@ delete_user = (id) => {
         id, 'Are you sure?', 'You wont be able to revert this!', 'Yes, Delete It!'
     )
 }
+
+$('#update_user').submit(function(e){
+    e.preventDefault();
+    let id = $('#userId').val();
+    let formData = $('#update_user').serialize();
+    
+    axios.put(`/api/users/${id}`, formData)
+        .then(res => {
+            swal_response('Success!', res.data.message, 'success', true);
+        })
+        .catch(err => {
+            swal_response('Error!', err.message, 'error')
+        })
+})
+
 
