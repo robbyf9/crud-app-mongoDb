@@ -7,3 +7,5 @@ To run the app you must create your own Cluster on MongoDB. After that you can f
   * Connect your Mongo Db by filling the variable `MONGO_URI` in `.env` with connection string including `username` and `passwords`
   * Run the server with `nodemon server.js`
   * Voila! Now you can see the server was runnin at `http://localhost:your_port` and displays the status of each running request
+
+All request recorded in `access.log` file
