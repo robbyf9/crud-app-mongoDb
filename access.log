@@ -238,3 +238,7 @@
 ::1 - - [12/Jan/2025:07:43:52 +0000] "PUT /api/users/67836f23c0712c9f29796189 HTTP/1.1" 200 41 "-" "PostmanRuntime/7.29.2"
 ::1 - - [12/Jan/2025:07:43:56 +0000] "PUT /api/users/67836f23c0712c9f29796189 HTTP/1.1" 200 39 "-" "PostmanRuntime/7.29.2"
 ::1 - - [12/Jan/2025:07:43:59 +0000] "GET /api/users HTTP/1.1" 200 210 "-" "PostmanRuntime/7.29.2"
+::1 - - [12/Jan/2025:08:04:53 +0000] "GET /api/users HTTP/1.1" 200 210 "-" "PostmanRuntime/7.29.2"
+::1 - - [12/Jan/2025:08:04:54 +0000] "GET /api/users HTTP/1.1" 200 210 "-" "PostmanRuntime/7.29.2"
+::1 - - [12/Jan/2025:08:05:03 +0000] "PUT /api/users/67836f23c0712c9f29796189 HTTP/1.1" 200 39 "-" "PostmanRuntime/7.29.2"
+::1 - - [12/Jan/2025:08:05:08 +0000] "GET /api/users HTTP/1.1" 200 210 "-" "PostmanRuntime/7.29.2"
