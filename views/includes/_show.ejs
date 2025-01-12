@@ -1,16 +1,14 @@
 <% users.forEach((item, index) => { %>
 <tr>
-    <td><%= ++index %></td>
-    <td><%= item.name %></td>
-    <td><%= item.email %></td>
-    <td><%= item.gender %></td>
-    <td><%= item.status %></td>
-    <td>
-        <a href="/update-user?id=<%= item._id %>" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i>
-        </a>
-        <button type="button" class="btn btn-sm btn-danger" id="btnDelete" value="<%= item._id %>" onclick="delete_user(this.value)">
-            <i class="fas fa-trash"></i>
-        </button>
-    </td>
+  <td><%= ++index %></td>
+  <td><%= item.name %></td>
+  <td><%= item.email %></td>
+  <td><%= item.umur %></td>
+  <td>
+    <a href="/update-user?id=<%= item._id %>" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i> </a>
+    <button type="button" class="btn btn-sm btn-danger" id="btnDelete" value="<%= item._id %>" onclick="delete_user(this.value)">
+      <i class="fas fa-trash"></i>
+    </button>
+  </td>
 </tr>
 <% }) %>

@@ -1,41 +1,36 @@
 <!--Include Header-->
-    <%- include("includes/_header") %>
+<%- include("includes/_header") %>
 <!--/Include Header-->
 
-    <!-- Main Site -->
-    <main id="site-main">
-        <div class="container">
+<!-- Main Site -->
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav">
+      <a href="/add-user" class="btn btn-primary"> <i class="fas fa-user"> </i> New User </a>
+    </div>
 
-            <div class="box-nav">
-                <a href="/add-user" class="btn btn-primary">
-                    <i class="fas fa-user"> </i> New User
-                </a>
-            </div>
-
-            <!-- Form Handling-->
-                <form action="/" method="POST">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Name</th>
-                                    <th>@Email</th>
-                                    <th>Gender</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <%- include('includes/_show') %>
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
-            <!-- /Form Handling-->
-        </div>
-
-    </main>
+    <!-- Form Handling-->
+    <form action="/" method="POST">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>@Email</th>
+              <th>Umur</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%- include('includes/_show') %>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <!-- /Form Handling-->
+  </div>
+</main>
 <!-- /Main Site-->
 
 <!--Include Footer-->
